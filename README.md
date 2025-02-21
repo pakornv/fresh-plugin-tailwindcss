@@ -1,6 +1,6 @@
 # Tailwind CSS v4 plugin for Fresh
 
-A unofficial Tailwind CSS v4 plugin to use in Fresh.
+An unofficial Tailwind CSS v4 plugin to use in Fresh.
 
 ```ts
 // fresh.config.ts
