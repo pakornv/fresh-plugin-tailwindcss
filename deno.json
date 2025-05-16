@@ -1,14 +1,12 @@
 {
   "name": "@pakornv/fresh-plugin-tailwindcss",
-  "version": "1.0.3",
+  "version": "2.0.0-alpha.1",
   "license": "MIT",
   "exports": "./mod.ts",
   "imports": {
-    "@std/fs": "jsr:@std/fs@^1.0.17",
-    "@std/path": "jsr:@std/path@^1.0.9",
+    "@fresh/core": "jsr:@fresh/core@^2.0.0-alpha.33",
     "@tailwindcss/oxide": "npm:@tailwindcss/oxide@4.1.7",
     "@tailwindcss/postcss": "npm:@tailwindcss/postcss@^4.1.7",
-    "cssnano": "npm:cssnano@^7.0.7",
     "postcss": "npm:postcss@^8.5.3"
   }
 }
