@@ -2,6 +2,13 @@
 
 An unofficial Tailwind CSS v4 plugin to use in Fresh.
 
+## Installation
+Add `"nodeModulesDir": "auto"` to your deno.json file and
+```sh
+deno add --allow-scripts jsr:@pakornv/fresh-plugin-tailwindcss
+```
+
+## Usage
 ```ts
 // fresh.config.ts
 
