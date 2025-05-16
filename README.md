@@ -3,21 +3,30 @@
 An unofficial Tailwind CSS v4 plugin to use in Fresh.
 
 ## Installation
+
 Add `"nodeModulesDir": "auto"` to your deno.json file and
+
 ```sh
-deno add --allow-scripts jsr:@pakornv/fresh-plugin-tailwindcss
+deno add --allow-scripts jsr:@pakornv/fresh-plugin-tailwindcss@2.0.0-alpha.1
 ```
 
 ## Usage
+
 ```ts
-// fresh.config.ts
+// dev.ts
 
-import { defineConfig } from "$fresh/server.ts";
-import tailwind from "@pakornv/fresh-plugin-tailwindcss";
+import { tailwind } from "@pakornv/fresh-plugin-tailwindcss";
 
-export default defineConfig({
-  plugins: [tailwind()],
-});
+import { Builder } from "fresh/dev";
+import { app } from "./main.ts";
+
+const builder = new Builder();
+tailwind(builder, app);
+if (Deno.args.includes("build")) {
+  await builder.build(app);
+} else {
+  await builder.listen(app);
+}
 ```
 
 ## Credits
